@@ -6,7 +6,7 @@ const staticMovies = [
     release_date: "2008-07-18",
     vote_average: 9.0,
     overview: "Batman battles the Joker in Gotham City.",
-    poster_path: "/1.png",
+    poster_path: "/images/1.png",
   },
   {
     id: "s2",
@@ -14,7 +14,7 @@ const staticMovies = [
     release_date: "2010-07-16",
     vote_average: 8.8,
     overview: "A thief steals secrets by entering dreams.",
-    poster_path: "/images/2.png",
+    poster_path: "/images/1.png",
   },
   {
     id: "s3",
@@ -22,7 +22,7 @@ const staticMovies = [
     release_date: "2014-11-07",
     vote_average: 8.6,
     overview: "Explorers travel through a wormhole to save humanity.",
-    poster_path: "/images/3.png",
+    poster_path: "/images/1.png",
   },
   {
     id: "s4",

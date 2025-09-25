@@ -6,7 +6,7 @@ import staticMovies from "../../StaticMovies";
 
 function MovieList({ type, title }) {
   const [apiMovies, setApiMovies] = useState([]);
-  const [filteredMovies, setFilteredMovies] = useState([]);
+  const [filteredMovies, setFilteredMovies] = useState(staticMovies); // show static immediately
   const [minRating, setMinRating] = useState(0);
   const [sort, setSort] = useState({ by: "default", order: "asc" });
 
@@ -35,7 +35,7 @@ function MovieList({ type, title }) {
   };
 
   useEffect(() => {
-    // Always combine static + API movies
+    // Combine static + API movies whenever API updates
     let combined = [...staticMovies, ...apiMovies];
 
     if (minRating > 0) combined = combined.filter((m) => m.vote_average >= minRating);
