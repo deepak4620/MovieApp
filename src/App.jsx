@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Navbar from './Components/Navbar';
 import MovieList from './Components/MovieList/MovieList';
 
 function App() {
+
+  useEffect(() => {
+    alert("⚠️ Please connect to a VPN (VPNLY- Extension) & Use Microsoft Edge So TMDB API Work Properly!");
+  }, []);
+
   return (
     <div className='app'>
       <Navbar />
