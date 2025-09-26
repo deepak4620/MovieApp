@@ -1,61 +1,86 @@
+/* MovieList container */
+.movie_list {
+  padding: 20px 0;
+  transition: background 0.3s ease, color 0.3s ease;
+  background-color: #f2f2f2;
+  color: #000;               
+}
+
+
 .movie_list_header {
   padding: 10px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
+
 .movie_list_heading {
-  display: flex;
-  align-items: center;
   font-size: 16px;
   color: rgb(240, 221, 14);
 }
 
-.movie_filter {
-  display: flex;
-  font-size: 16px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 0.5rem;
-}
 
 .movie_list_fs {
   display: flex;
   align-items: center;
   gap: 1rem;
+  
+}
+
+
+.movie_filter {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .movie_filter_item {
-  padding: 5px 10px;
+  padding: 5px 12px;
   cursor: pointer;
+  border-radius: 5px;
+  background-color: #222;  
+  color: #fff;
+  white-space: nowrap;
+  font-size: 14px;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
 .movie_filter_item.active {
-  border-bottom: 1px solid #e6e6ee;
-  font-weight: 500;
+  border-bottom: 2px solid #ffe400;
+  color: #ffe400;
 }
 
-.movie_sorting {
-  display: flex;
-  align-items: center;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: 500;
-  font-family: inherit;
-  padding: 5px 10px;
-  height: 30px;
-  margin: 0 10px;
-  color: #e6e6ee;
-  background-color: black;
-}
 
 .movie_cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 0 20px;
+  transition: background 0.3s ease;
+}
+
+/* ================= Dark Mode ================= */
+body.dark .movie_list {
+  background-color: #121212;
+  color: #fff;
+}
+
+body.dark .movie_cards {
+  background-color: #121212;
+}
+
+body.dark .movie_filter_item {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark .movie_filter_item.active {
+  border-bottom: 2px solid #ffe400;
+  color: #ffe400;
 }

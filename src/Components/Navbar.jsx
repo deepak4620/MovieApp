@@ -1,9 +1,7 @@
-// import React from 'react'
 import React, { useState, useEffect } from "react";
-import './Navbar.css'
+import './Navbar.css';
 
 function Navbar() {
-
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("theme") === "dark"
   );
@@ -18,33 +16,24 @@ function Navbar() {
     }
   }, [darkMode]);
 
-
   return (
     <nav className='navbar'>
-        <h1>MovieMax</h1>
-       
-        <div className='navbar_links'>
-          
-         <button
+      <h1>MovieMax</h1>
+
+      <div className='navbar_links'>
+        <button
           className="toggle-btn"
           onClick={() => setDarkMode(!darkMode)}
         >
           {darkMode ? "🌙" : "☀️"}
         </button>
 
-            <a href="#popular">Popular 🔥</a>
-            <a href="#top_rated">Top Rated 🌟</a>
-            <a href="#upcoming">Upcoming 🥳</a>
-          
-
-        </div>
-            
-        
+        <a href="#popular">Popular 🔥</a>
+        <a href="#top_rated">Top Rated 🌟</a>
+        <a href="#upcoming">Upcoming 🥳</a>
+      </div>
     </nav>
-    
-    
-      
-  )
+  );
 }
 
-export default Navbar; 
+export default Navbar;
